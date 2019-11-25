@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  StarterKit
+
+  Created by Emilio Pavia on 25/11/2019.
+  Copyright © 2019 Emilio Pavia. All rights reserved.
+*/
+
+"TEST" = "PASSED";
