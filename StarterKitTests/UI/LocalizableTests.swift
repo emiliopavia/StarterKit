@@ -85,6 +85,23 @@ class LocalizableTests: XCTestCase {
         XCTAssertEqual(viewController.navigationItem.title, key)
         XCTAssertNil(viewController.navigationItem.localizableTitle)
     }
+    
+    func testLocalizedTextFieldPlaceholder() {
+        // IMPORTANT:
+        // we cannot load localized string from tests without specifying
+        // the bundle, so here we're just testing that assigning the key
+        // updates the text
+        
+        // given
+        let textField = UITextField()
+
+        // when
+        textField.localizablePlaceholderKey = key
+        
+        // then
+        XCTAssertEqual(textField.placeholder, key)
+        XCTAssertNil(textField.localizablePlaceholderKey)
+    }
 }
 
 extension String {

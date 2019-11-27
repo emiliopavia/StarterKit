@@ -61,3 +61,12 @@ extension UINavigationItem {
         }
     }
 }
+
+extension UITextField {
+    @IBInspectable public var localizablePlaceholderKey: String? {
+        get { return nil }  // not needed
+        set(key) {
+            placeholder = key?.localized()
+        }
+    }
+}
