@@ -10,6 +10,8 @@
 		BC7D000C238E912900A47840 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7D000B238E912900A47840 /* UIViewTests.swift */; };
 		BC7D000E238E915400A47840 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7D000D238E915400A47840 /* TestView.swift */; };
 		BC7D0011238E918100A47840 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7D0010238E918100A47840 /* TestView.xib */; };
+		BC7D0017238EDA4700A47840 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7D0016238EDA4700A47840 /* KeyboardObserver.swift */; };
+		BC7D0019238EDC2E00A47840 /* KeyboardObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7D0018238EDC2D00A47840 /* KeyboardObserverTests.swift */; };
 		BC95597B238A797F00687634 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95597A238A797F00687634 /* Localizable.swift */; };
 		BC955980238BCA8900687634 /* NSAttributedString+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95597F238BCA8900687634 /* NSAttributedString+HTML.swift */; };
 		BC955985238BD0FB00687634 /* LocalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC955984238BD0FB00687634 /* LocalizableTests.swift */; };
@@ -43,6 +45,8 @@
 		BC7D000B238E912900A47840 /* UIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
 		BC7D000D238E915400A47840 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		BC7D0010238E918100A47840 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
+		BC7D0016238EDA4700A47840 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		BC7D0018238EDC2D00A47840 /* KeyboardObserverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserverTests.swift; sourceTree = "<group>"; };
 		BC95597A238A797F00687634 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		BC95597F238BCA8900687634 /* NSAttributedString+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+HTML.swift"; sourceTree = "<group>"; };
 		BC955984238BD0FB00687634 /* LocalizableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableTests.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		BC95597C238BCA0200687634 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BC7D0016238EDA4700A47840 /* KeyboardObserver.swift */,
 				BC95597A238A797F00687634 /* Localizable.swift */,
 				BC95597F238BCA8900687634 /* NSAttributedString+HTML.swift */,
 				BCA6B54B238E79A200FE9E67 /* UIView+StarterKit.swift */,
@@ -107,6 +112,7 @@
 		BC955983238BD0E600687634 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BC7D0018238EDC2D00A47840 /* KeyboardObserverTests.swift */,
 				BC955984238BD0FB00687634 /* LocalizableTests.swift */,
 				BC95598A238BD9A300687634 /* NSAttributedStringHTMLTests.swift */,
 				BC7D000B238E912900A47840 /* UIViewTests.swift */,
@@ -330,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCA911182387EDA200BDBE98 /* Cancellable.swift in Sources */,
+				BC7D0017238EDA4700A47840 /* KeyboardObserver.swift in Sources */,
 				BCA911152387ED8200BDBE98 /* URLProtocolMock.swift in Sources */,
 				BCA9110A2387E9BC00BDBE98 /* DispatchQueue+StarterKit.swift in Sources */,
 				BCA6B54C238E79A200FE9E67 /* UIView+StarterKit.swift in Sources */,
@@ -345,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC7D000C238E912900A47840 /* UIViewTests.swift in Sources */,
+				BC7D0019238EDC2E00A47840 /* KeyboardObserverTests.swift in Sources */,
 				BCA9111D2387EF6F00BDBE98 /* URLProtocolMockTests.swift in Sources */,
 				BCA9110D2387EA0B00BDBE98 /* InjectionCenterTests.swift in Sources */,
 				BCA910652387D5D800BDBE98 /* StarterKitTests.swift in Sources */,
