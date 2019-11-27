@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC7D000C238E912900A47840 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7D000B238E912900A47840 /* UIViewTests.swift */; };
+		BC7D000E238E915400A47840 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7D000D238E915400A47840 /* TestView.swift */; };
+		BC7D0011238E918100A47840 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7D0010238E918100A47840 /* TestView.xib */; };
 		BC95597B238A797F00687634 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95597A238A797F00687634 /* Localizable.swift */; };
 		BC955980238BCA8900687634 /* NSAttributedString+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95597F238BCA8900687634 /* NSAttributedString+HTML.swift */; };
 		BC955985238BD0FB00687634 /* LocalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC955984238BD0FB00687634 /* LocalizableTests.swift */; };
 		BC955987238BD17E00687634 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC955986238BD17E00687634 /* Localizable.strings */; };
 		BC95598B238BD9A300687634 /* NSAttributedStringHTMLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95598A238BD9A300687634 /* NSAttributedStringHTMLTests.swift */; };
+		BCA6B54C238E79A200FE9E67 /* UIView+StarterKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6B54B238E79A200FE9E67 /* UIView+StarterKit.swift */; };
 		BCA910602387D5D800BDBE98 /* StarterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA910562387D5D800BDBE98 /* StarterKit.framework */; };
 		BCA910652387D5D800BDBE98 /* StarterKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA910642387D5D800BDBE98 /* StarterKitTests.swift */; };
 		BCA910672387D5D800BDBE98 /* StarterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BCA910592387D5D800BDBE98 /* StarterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,11 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC7D000B238E912900A47840 /* UIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
+		BC7D000D238E915400A47840 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		BC7D0010238E918100A47840 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		BC95597A238A797F00687634 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		BC95597F238BCA8900687634 /* NSAttributedString+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+HTML.swift"; sourceTree = "<group>"; };
 		BC955984238BD0FB00687634 /* LocalizableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableTests.swift; sourceTree = "<group>"; };
 		BC955986238BD17E00687634 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BC95598A238BD9A300687634 /* NSAttributedStringHTMLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringHTMLTests.swift; sourceTree = "<group>"; };
+		BCA6B54B238E79A200FE9E67 /* UIView+StarterKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+StarterKit.swift"; sourceTree = "<group>"; };
 		BCA910562387D5D800BDBE98 /* StarterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StarterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA910592387D5D800BDBE98 /* StarterKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarterKit.h; sourceTree = "<group>"; };
 		BCA9105A2387D5D800BDBE98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,11 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC7D000F238E916B00A47840 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				BC955986238BD17E00687634 /* Localizable.strings */,
+				BC7D000D238E915400A47840 /* TestView.swift */,
+				BC7D0010238E918100A47840 /* TestView.xib */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		BC95597C238BCA0200687634 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				BC95597A238A797F00687634 /* Localizable.swift */,
 				BC95597F238BCA8900687634 /* NSAttributedString+HTML.swift */,
+				BCA6B54B238E79A200FE9E67 /* UIView+StarterKit.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -88,9 +107,10 @@
 		BC955983238BD0E600687634 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				BC955986238BD17E00687634 /* Localizable.strings */,
 				BC955984238BD0FB00687634 /* LocalizableTests.swift */,
 				BC95598A238BD9A300687634 /* NSAttributedStringHTMLTests.swift */,
+				BC7D000B238E912900A47840 /* UIViewTests.swift */,
+				BC7D000F238E916B00A47840 /* Fixtures */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -297,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC7D0011238E918100A47840 /* TestView.xib in Resources */,
 				BC955987238BD17E00687634 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +332,7 @@
 				BCA911182387EDA200BDBE98 /* Cancellable.swift in Sources */,
 				BCA911152387ED8200BDBE98 /* URLProtocolMock.swift in Sources */,
 				BCA9110A2387E9BC00BDBE98 /* DispatchQueue+StarterKit.swift in Sources */,
+				BCA6B54C238E79A200FE9E67 /* UIView+StarterKit.swift in Sources */,
 				BCA911072387E91000BDBE98 /* InjectionCenter.swift in Sources */,
 				BC95597B238A797F00687634 /* Localizable.swift in Sources */,
 				BC955980238BCA8900687634 /* NSAttributedString+HTML.swift in Sources */,
@@ -322,9 +344,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC7D000C238E912900A47840 /* UIViewTests.swift in Sources */,
 				BCA9111D2387EF6F00BDBE98 /* URLProtocolMockTests.swift in Sources */,
 				BCA9110D2387EA0B00BDBE98 /* InjectionCenterTests.swift in Sources */,
 				BCA910652387D5D800BDBE98 /* StarterKitTests.swift in Sources */,
+				BC7D000E238E915400A47840 /* TestView.swift in Sources */,
 				BCA911102387EB6D00BDBE98 /* DispatchQueueTests.swift in Sources */,
 				BC95598B238BD9A300687634 /* NSAttributedStringHTMLTests.swift in Sources */,
 				BC955985238BD0FB00687634 /* LocalizableTests.swift in Sources */,
