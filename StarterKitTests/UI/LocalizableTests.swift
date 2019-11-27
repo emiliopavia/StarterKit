@@ -68,6 +68,23 @@ class LocalizableTests: XCTestCase {
         XCTAssertEqual(button.title(for: .normal), key)
         XCTAssertNil(button.localizableKey)
     }
+    
+    func testLocalizedNavigationTitle() {
+        // IMPORTANT:
+        // we cannot load localized string from tests without specifying
+        // the bundle, so here we're just testing that assigning the key
+        // updates the text
+        
+        // given
+        let viewController = UIViewController()
+
+        // when
+        viewController.navigationItem.localizableTitle = key
+        
+        // then
+        XCTAssertEqual(viewController.navigationItem.title, key)
+        XCTAssertNil(viewController.navigationItem.localizableTitle)
+    }
 }
 
 extension String {

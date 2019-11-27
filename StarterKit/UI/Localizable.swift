@@ -25,11 +25,7 @@ extension Localizable where Self: CustomStringConvertible {
 
 extension String: Localizable {}
 
-public protocol IBLocalizable {
-    var localizableKey: String? { get set }
-}
-
-extension UILabel: IBLocalizable {
+extension UILabel {
     @IBInspectable public var localizableKey: String? {
         get { return nil }  // not needed
         set(key) {
@@ -48,11 +44,20 @@ extension UILabel: IBLocalizable {
     }
 }
 
-extension UIButton: IBLocalizable {
+extension UIButton {
     @IBInspectable public var localizableKey: String? {
         get { return nil }  // not needed
         set(key) {
             setTitle(key?.localized(), for: .normal)
         }
-   }
+    }
+}
+
+extension UINavigationItem {
+    @IBInspectable public var localizableTitle: String? {
+        get { return nil }  // not needed
+        set(key) {
+            title = key?.localized()
+        }
+    }
 }
