@@ -19,6 +19,8 @@
 		BC955985238BD0FB00687634 /* LocalizableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC955984238BD0FB00687634 /* LocalizableTests.swift */; };
 		BC955987238BD17E00687634 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC955986238BD17E00687634 /* Localizable.strings */; };
 		BC95598B238BD9A300687634 /* NSAttributedStringHTMLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95598A238BD9A300687634 /* NSAttributedStringHTMLTests.swift */; };
+		BC988BBD239A6CA6006F0D91 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC988BBC239A6CA6006F0D91 /* JWT.swift */; };
+		BC988BC0239A7004006F0D91 /* JWTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC988BBF239A7004006F0D91 /* JWTTests.swift */; };
 		BCA6B54C238E79A200FE9E67 /* UIView+StarterKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6B54B238E79A200FE9E67 /* UIView+StarterKit.swift */; };
 		BCA910602387D5D800BDBE98 /* StarterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA910562387D5D800BDBE98 /* StarterKit.framework */; };
 		BCA910652387D5D800BDBE98 /* StarterKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA910642387D5D800BDBE98 /* StarterKitTests.swift */; };
@@ -56,6 +58,8 @@
 		BC955984238BD0FB00687634 /* LocalizableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableTests.swift; sourceTree = "<group>"; };
 		BC955986238BD17E00687634 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		BC95598A238BD9A300687634 /* NSAttributedStringHTMLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringHTMLTests.swift; sourceTree = "<group>"; };
+		BC988BBC239A6CA6006F0D91 /* JWT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
+		BC988BBF239A7004006F0D91 /* JWTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTTests.swift; sourceTree = "<group>"; };
 		BCA6B54B238E79A200FE9E67 /* UIView+StarterKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+StarterKit.swift"; sourceTree = "<group>"; };
 		BCA910562387D5D800BDBE98 /* StarterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StarterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA910592387D5D800BDBE98 /* StarterKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarterKit.h; sourceTree = "<group>"; };
@@ -127,6 +131,22 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		BC988BBB239A6C4E006F0D91 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				BC988BBC239A6CA6006F0D91 /* JWT.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		BC988BBE239A6FF1006F0D91 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				BC988BBF239A7004006F0D91 /* JWTTests.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		BCA9104C2387D5D800BDBE98 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +170,7 @@
 			children = (
 				BCA910592387D5D800BDBE98 /* StarterKit.h */,
 				BCA9105A2387D5D800BDBE98 /* Info.plist */,
+				BC988BBB239A6C4E006F0D91 /* Authentication */,
 				BCA911082387E99100BDBE98 /* Concurrency */,
 				BCA911052387E8D300BDBE98 /* Dependency Injection */,
 				BCA911112387ED2600BDBE98 /* Networking */,
@@ -164,6 +185,7 @@
 			children = (
 				BCA910662387D5D800BDBE98 /* Info.plist */,
 				BCA910642387D5D800BDBE98 /* StarterKitTests.swift */,
+				BC988BBE239A6FF1006F0D91 /* Authentication */,
 				BCA9110E2387EB5800BDBE98 /* Concurrency */,
 				BCA9110B2387E9D800BDBE98 /* Dependency Injection */,
 				BCA9111B2387EF5C00BDBE98 /* Networking */,
@@ -342,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCA911182387EDA200BDBE98 /* Cancellable.swift in Sources */,
+				BC988BBD239A6CA6006F0D91 /* JWT.swift in Sources */,
 				BC7D0017238EDA4700A47840 /* KeyboardObserver.swift in Sources */,
 				BCA911152387ED8200BDBE98 /* URLProtocolMock.swift in Sources */,
 				BCA9110A2387E9BC00BDBE98 /* DispatchQueue+StarterKit.swift in Sources */,
@@ -360,6 +383,7 @@
 			files = (
 				BC7D000C238E912900A47840 /* UIViewTests.swift in Sources */,
 				BC7D0019238EDC2E00A47840 /* KeyboardObserverTests.swift in Sources */,
+				BC988BC0239A7004006F0D91 /* JWTTests.swift in Sources */,
 				BCA9111D2387EF6F00BDBE98 /* URLProtocolMockTests.swift in Sources */,
 				BCA9110D2387EA0B00BDBE98 /* InjectionCenterTests.swift in Sources */,
 				BCA910652387D5D800BDBE98 /* StarterKitTests.swift in Sources */,
