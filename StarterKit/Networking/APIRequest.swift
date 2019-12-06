@@ -14,8 +14,9 @@ public enum HTTPMethod: String {
 
 public enum ResponseError: Error {
     case networkError(Error?)
-    case httpError(Int)
     case unauthorized
+    case httpError(Int)
+    case badResponse
 }
 
 public typealias APIResponse = Result<Data, ResponseError>
@@ -24,9 +25,8 @@ public typealias APIResponseHandler = (APIResponse) -> Void
 public protocol APIRequest {
     var method: HTTPMethod { get }
     var endpoint: String? { get }
-    var parameters: [String: String?]? { get }
     var headers: [String: String]? { get }
-    var contentType: String { get }
-    var body: Data? { get }
+    var parameters: [String: String?]? { get }
+    var contentType: String? { get }
     var responseHandler: APIResponseHandler { get }
 }
