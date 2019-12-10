@@ -44,7 +44,7 @@ open class URLProtocolMock: URLProtocol {
     }
     
     public class func response(for request: URLRequest) -> URLResponseStub? {
-        stubs[request]
+        stubs[canonicalRequest(for: request)]
     }
     
     override open class func canInit(with request: URLRequest) -> Bool {
@@ -52,6 +52,10 @@ open class URLProtocolMock: URLProtocol {
     }
 
     override open class func canonicalRequest(for request: URLRequest) -> URLRequest {
+        var request = request
+        if let httpBodyStream = request.httpBodyStream {
+            request.httpBody = httpBodyStream.data
+        }
         return request
     }
 
@@ -74,4 +78,28 @@ open class URLProtocolMock: URLProtocol {
     }
 
     override open func stopLoading() {}
+}
+
+private extension InputStream {
+    var data: Data? {
+        var data = NSMutableData()
+        
+        let capacity = 4096
+        let pointer = UnsafeMutablePointer<UInt8>.allocate(capacity: capacity)
+        pointer.initialize(repeating: 0, count: capacity)
+        defer {
+          pointer.deinitialize(count: capacity)
+          pointer.deallocate()
+        }
+        
+        open()
+        while hasBytesAvailable {
+            let length = read(pointer, maxLength: capacity)
+            guard length > 0 else { break }
+            data.append(pointer, length: length)
+        }
+        close()
+        
+        return Data(referencing: data)
+    }
 }
