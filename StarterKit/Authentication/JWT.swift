@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct JWT {
+public struct JWT {
     
-    let header: [String: Any]
-    let payload: [String: Any]
+    public let header: [String: Any]
+    public let payload: [String: Any]
     
-    static func decode(string: String) -> JWT? {
+    public static func decode(string: String) -> JWT? {
         let parts = string.split(separator: ".")
         
         guard parts.count == 3 else { return nil }
