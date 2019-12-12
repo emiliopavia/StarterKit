@@ -37,10 +37,18 @@ public struct URLResponseStub {
 
 open class URLProtocolMock: URLProtocol {
     
+    static var allRequests: [URLRequest] { Array(stubs.keys) }
+    static var loadedRequests = [URLRequest]()
+    
     private static var stubs = [URLRequest: URLResponseStub]()
 
     public class func set(_ response: URLResponseStub, for request: URLRequest) {
         stubs[request] = response
+    }
+    
+    public class func clearAll() {
+        loadedRequests.removeAll()
+        stubs.removeAll()
     }
     
     public class func response(for request: URLRequest) -> URLResponseStub? {
@@ -63,6 +71,8 @@ open class URLProtocolMock: URLProtocol {
         guard let client = client else { return }
         
         if let stub = Self.response(for: request) {
+            Self.loadedRequests.append(request)
+            
             if let error = stub.error {
                 client.urlProtocol(self, didFailWithError: error)
             }

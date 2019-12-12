@@ -73,5 +73,49 @@ class URLProtocolMockTests: XCTestCase {
         
         waitForExpectations(timeout: 1.0, handler: nil)
     }
+    
+    func testResponseIsReturnedForRequestWithHTTPBody() {
+        let responseExpectation = expectation(description: "response")
+        
+        // given
+        let domain = "URLProtocolMock.tests"
+        let code = 47
+        let response = URLResponseStub(error: NSError(domain: domain, code: code, userInfo: nil))
+        
+        var request = URLRequest(url: url)
+        let httpBody = NSUUID().uuidString.data(using: .utf8)!
+        request.httpBody = httpBody
+        request.addValue("\(httpBody.count)", forHTTPHeaderField: "Content-Length")
+        
+        URLProtocolMock.set(response, for: request)
+        
+        // when
+        session.dataTask(with: request) { data, response, error in
+            // then
+            XCTAssertNil(data)
+            XCTAssertNil(response)
+            XCTAssertEqual((error as NSError?)?.domain, domain)
+            XCTAssertEqual((error as NSError?)?.code, code)
+            responseExpectation.fulfill()
+        }.resume()
+        
+        waitForExpectations(timeout: 1.0, handler: nil)
+    }
+    
+    func testClearAllResetStubs() {
+        // given
+        let ok = "OK"
+        let statusCode = 300
+        let response = URLResponseStub(data: ok.data(using: .utf8), url: url, statusCode: statusCode)
+        
+        URLProtocolMock.set(response, for: URLRequest(url: url))
+        XCTAssertFalse(URLProtocolMock.allRequests.isEmpty)
+        
+        // when
+        URLProtocolMock.clearAll()
+        
+        // then
+        XCTAssertTrue(URLProtocolMock.allRequests.isEmpty)
+    }
 
 }
