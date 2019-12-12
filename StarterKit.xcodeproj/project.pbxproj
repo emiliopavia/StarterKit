@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC12D05223A29A7C002307C3 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12D05123A29A7C002307C3 /* URLProtocolStub.swift */; };
+		BC12D05423A29ABC002307C3 /* URLProtocolStubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12D05323A29ABC002307C3 /* URLProtocolStubTests.swift */; };
 		BC60EC8D2396636800736213 /* UIImage+StarterKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60EC8C2396636800736213 /* UIImage+StarterKit.swift */; };
 		BC60EC8F2396638800736213 /* UIImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60EC8E2396638800736213 /* UIImageTests.swift */; };
 		BC7D000C238E912900A47840 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7D000B238E912900A47840 /* UIViewTests.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC12D05123A29A7C002307C3 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
+		BC12D05323A29ABC002307C3 /* URLProtocolStubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStubTests.swift; sourceTree = "<group>"; };
 		BC60EC8C2396636800736213 /* UIImage+StarterKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+StarterKit.swift"; sourceTree = "<group>"; };
 		BC60EC8E2396638800736213 /* UIImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTests.swift; sourceTree = "<group>"; };
 		BC7D000B238E912900A47840 /* UIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 			children = (
 				BCA911192387EE5800BDBE98 /* APIRequest.swift */,
 				BCA911142387ED8200BDBE98 /* URLProtocolMock.swift */,
+				BC12D05123A29A7C002307C3 /* URLProtocolStub.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				BCA9111C2387EF6F00BDBE98 /* URLProtocolMockTests.swift */,
+				BC12D05323A29ABC002307C3 /* URLProtocolStubTests.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 				BCA9110A2387E9BC00BDBE98 /* DispatchQueue+StarterKit.swift in Sources */,
 				BCA6B54C238E79A200FE9E67 /* UIView+StarterKit.swift in Sources */,
 				BCA911072387E91000BDBE98 /* InjectionCenter.swift in Sources */,
+				BC12D05223A29A7C002307C3 /* URLProtocolStub.swift in Sources */,
 				BC60EC8D2396636800736213 /* UIImage+StarterKit.swift in Sources */,
 				BC95597B238A797F00687634 /* Localizable.swift in Sources */,
 				BC955980238BCA8900687634 /* NSAttributedString+HTML.swift in Sources */,
@@ -388,6 +395,7 @@
 				BCA9110D2387EA0B00BDBE98 /* InjectionCenterTests.swift in Sources */,
 				BCA910652387D5D800BDBE98 /* StarterKitTests.swift in Sources */,
 				BC7D000E238E915400A47840 /* TestView.swift in Sources */,
+				BC12D05423A29ABC002307C3 /* URLProtocolStubTests.swift in Sources */,
 				BCA911102387EB6D00BDBE98 /* DispatchQueueTests.swift in Sources */,
 				BC60EC8F2396638800736213 /* UIImageTests.swift in Sources */,
 				BC95598B238BD9A300687634 /* NSAttributedStringHTMLTests.swift in Sources */,
