@@ -11,7 +11,7 @@ import XCTest
 
 class JWTTests: XCTestCase {
 
-    let string = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImp0aSI6IjkzZmYyYmMzLTk4YzYtNDU3YS1hNGZmLTEwNjRiZGNmYTk0ZCIsImlhdCI6MTU3NTYzMTA0MCwiZXhwIjoxNTc1NjM0NjQwfQ.S6ZcujjnWYYJEYs08JzNNv2I3cgmQq66EGXPhp1GStA"
+    let valid = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImp0aSI6IjkzZmYyYmMzLTk4YzYtNDU3YS1hNGZmLTEwNjRiZGNmYTk0ZCIsImlhdCI6MTU3NTYzMTA0MCwiZXhwIjoxNTc1NjM0NjQwfQ.S6ZcujjnWYYJEYs08JzNNv2I3cgmQq66EGXPhp1GStA"
     
     let typ = "JWT"
     let alg = "HS256"
@@ -25,7 +25,7 @@ class JWTTests: XCTestCase {
 
     func testHeaderDecoding() {
         // when
-        let jwt = JWT.decode(string: string)
+        let jwt = JWT(token: valid)
         
         // then
         XCTAssertNotNil(jwt)
@@ -35,7 +35,7 @@ class JWTTests: XCTestCase {
     
     func testPayloadDecoding() {
         // when
-        let jwt = JWT.decode(string: string)
+        let jwt = JWT(token: valid)
         
         // then
         XCTAssertNotNil(jwt)
@@ -54,9 +54,18 @@ class JWTTests: XCTestCase {
                       NSUUID().uuidString.data(using: .utf8)!.base64EncodedString()].joined(separator: ".")
         
         // when
-        let jwt = JWT.decode(string: random)
+        let jwt = JWT(token: random)
         
         // then
         XCTAssertNil(jwt)
+    }
+    
+    func testStringRepresentation() {
+        // when
+        let jwt = JWT(token: valid)
+        
+        // then
+        XCTAssertNotNil(jwt)
+        XCTAssertEqual(String(describing: jwt!), valid)
     }
 }

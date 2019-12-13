@@ -9,23 +9,26 @@
 import Foundation
 
 public struct JWT {
-    
+   
     public let header: [String: Any]
     public let payload: [String: Any]
     
-    public static func decode(string: String) -> JWT? {
-        let parts = string.split(separator: ".")
+    private let token: String
+    
+    public init?(token: String) {
+        let parts = token.split(separator: ".")
         
         guard parts.count == 3 else { return nil }
-        guard let headerData = base64decode(input: String(parts[0])) else { return nil }
-        guard let payloadData = base64decode(input: String(parts[1])) else { return nil }
+        guard let headerData = Self.base64decode(input: String(parts[0])) else { return nil }
+        guard let payloadData = Self.base64decode(input: String(parts[1])) else { return nil }
         
         do {
             guard let header = try JSONSerialization.jsonObject(with: headerData, options: []) as? [String: Any] else { return nil }
             guard let payload = try JSONSerialization.jsonObject(with: payloadData, options: []) as? [String: Any] else { return nil }
             
-            return JWT(header: header,
-                       payload: payload)
+            self.header = header
+            self.payload = payload
+            self.token = token
         } catch {
             return nil
         }
@@ -44,4 +47,8 @@ public struct JWT {
         
         return Data(base64Encoded: base64, options: [.ignoreUnknownCharacters])
     }
+}
+
+extension JWT: CustomStringConvertible {
+    public var description: String { token }
 }
