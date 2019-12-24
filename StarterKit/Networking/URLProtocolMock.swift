@@ -37,8 +37,8 @@ public struct URLResponseStub {
 
 open class URLProtocolMock: URLProtocol {
     
-    static var allRequests: [URLRequest] { Array(stubs.keys) }
-    static var loadedRequests = [URLRequest]()
+    public static var allRequests: [URLRequest] { Array(stubs.keys) }
+    public static var loadedRequests = [URLRequest]()
     
     private static var stubs = [URLRequest: URLResponseStub]()
 
