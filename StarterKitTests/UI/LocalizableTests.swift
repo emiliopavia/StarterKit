@@ -102,6 +102,23 @@ class LocalizableTests: XCTestCase {
         XCTAssertEqual(textField.placeholder, key)
         XCTAssertNil(textField.localizablePlaceholderKey)
     }
+    
+    func testLocalizedTabBarItem() {
+        // IMPORTANT:
+        // we cannot load localized string from tests without specifying
+        // the bundle, so here we're just testing that assigning the key
+        // updates the text
+        
+        // given
+        let viewController = UIViewController()
+
+        // when
+        viewController.tabBarItem.localizableTitle = key
+        
+        // then
+        XCTAssertEqual(viewController.tabBarItem.title, key)
+        XCTAssertNil(viewController.tabBarItem.localizableTitle)
+    }
 }
 
 extension String {

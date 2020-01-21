@@ -62,6 +62,15 @@ extension UINavigationItem {
     }
 }
 
+extension UITabBarItem {
+    @IBInspectable public var localizableTitle: String? {
+        get { return nil }  // not needed
+        set(key) {
+            title = key?.localized()
+        }
+    }
+}
+
 extension UITextField {
     @IBInspectable public var localizablePlaceholderKey: String? {
         get { return nil }  // not needed
