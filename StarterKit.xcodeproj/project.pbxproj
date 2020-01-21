@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BC12D05223A29A7C002307C3 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12D05123A29A7C002307C3 /* URLProtocolStub.swift */; };
 		BC12D05423A29ABC002307C3 /* URLProtocolStubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12D05323A29ABC002307C3 /* URLProtocolStubTests.swift */; };
+		BC27168A23D6019C00AD200E /* UIFont+StarterKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC27168923D6019C00AD200E /* UIFont+StarterKit.swift */; };
+		BC57BBBB23D70DCD00C33945 /* UIFontTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC57BBBA23D70DCD00C33945 /* UIFontTests.swift */; };
 		BC60EC8D2396636800736213 /* UIImage+StarterKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60EC8C2396636800736213 /* UIImage+StarterKit.swift */; };
 		BC60EC8F2396638800736213 /* UIImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60EC8E2396638800736213 /* UIImageTests.swift */; };
 		BC7D000C238E912900A47840 /* UIViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7D000B238E912900A47840 /* UIViewTests.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		BC12D05123A29A7C002307C3 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		BC12D05323A29ABC002307C3 /* URLProtocolStubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStubTests.swift; sourceTree = "<group>"; };
+		BC27168923D6019C00AD200E /* UIFont+StarterKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+StarterKit.swift"; sourceTree = "<group>"; };
+		BC57BBBA23D70DCD00C33945 /* UIFontTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontTests.swift; sourceTree = "<group>"; };
 		BC60EC8C2396636800736213 /* UIImage+StarterKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+StarterKit.swift"; sourceTree = "<group>"; };
 		BC60EC8E2396638800736213 /* UIImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTests.swift; sourceTree = "<group>"; };
 		BC7D000B238E912900A47840 /* UIViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 				BC7D0016238EDA4700A47840 /* KeyboardObserver.swift */,
 				BC95597A238A797F00687634 /* Localizable.swift */,
 				BC95597F238BCA8900687634 /* NSAttributedString+HTML.swift */,
+				BC27168923D6019C00AD200E /* UIFont+StarterKit.swift */,
 				BC60EC8C2396636800736213 /* UIImage+StarterKit.swift */,
 				BCA6B54B238E79A200FE9E67 /* UIView+StarterKit.swift */,
 			);
@@ -129,6 +134,7 @@
 				BC7D0018238EDC2D00A47840 /* KeyboardObserverTests.swift */,
 				BC955984238BD0FB00687634 /* LocalizableTests.swift */,
 				BC95598A238BD9A300687634 /* NSAttributedStringHTMLTests.swift */,
+				BC57BBBA23D70DCD00C33945 /* UIFontTests.swift */,
 				BC60EC8E2396638800736213 /* UIImageTests.swift */,
 				BC7D000B238E912900A47840 /* UIViewTests.swift */,
 			);
@@ -375,6 +381,7 @@
 				BCA911152387ED8200BDBE98 /* URLProtocolMock.swift in Sources */,
 				BCA9110A2387E9BC00BDBE98 /* DispatchQueue+StarterKit.swift in Sources */,
 				BCA6B54C238E79A200FE9E67 /* UIView+StarterKit.swift in Sources */,
+				BC27168A23D6019C00AD200E /* UIFont+StarterKit.swift in Sources */,
 				BCA911072387E91000BDBE98 /* InjectionCenter.swift in Sources */,
 				BC12D05223A29A7C002307C3 /* URLProtocolStub.swift in Sources */,
 				BC60EC8D2396636800736213 /* UIImage+StarterKit.swift in Sources */,
@@ -390,6 +397,7 @@
 			files = (
 				BC7D000C238E912900A47840 /* UIViewTests.swift in Sources */,
 				BC7D0019238EDC2E00A47840 /* KeyboardObserverTests.swift in Sources */,
+				BC57BBBB23D70DCD00C33945 /* UIFontTests.swift in Sources */,
 				BC988BC0239A7004006F0D91 /* JWTTests.swift in Sources */,
 				BCA9111D2387EF6F00BDBE98 /* URLProtocolMockTests.swift in Sources */,
 				BCA9110D2387EA0B00BDBE98 /* InjectionCenterTests.swift in Sources */,
