@@ -21,4 +21,15 @@ public extension UIFont {
     func italic() -> UIFont {
         return withTraits(.traitItalic)
     }
+    
+    @available(iOS 13.0, *)
+    func withDesign(_ design: UIFontDescriptor.SystemDesign) -> UIFont {
+        let descriptor = fontDescriptor.withDesign(design)
+        return UIFont(descriptor: descriptor!, size: 0) //size 0 means keep the size as it is
+    }
+    
+    @available(iOS 13.0, *)
+    func rounded() -> UIFont {
+        return withDesign(.rounded)
+    }
 }
