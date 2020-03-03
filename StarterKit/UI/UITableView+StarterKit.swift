@@ -25,4 +25,26 @@ public extension UITableView {
         
         return nil
     }
+    
+    func deselectItems(transitionCoordinator: UIViewControllerTransitionCoordinator?) {
+        let selectedIndexPaths = indexPathsForSelectedRows ?? []
+        
+        if let coordinator = transitionCoordinator {
+            coordinator.animate(alongsideTransition: { context in
+                selectedIndexPaths.forEach {
+                    self.deselectRow(at: $0, animated: context.isAnimated)
+                }
+            }, completion: { context in
+                if context.isCancelled {
+                    selectedIndexPaths.forEach {
+                        self.selectRow(at: $0, animated: false, scrollPosition: .none)
+                    }
+                }
+            })
+        } else {
+            selectedIndexPaths.forEach {
+                deselectRow(at: $0, animated: false)
+            }
+        }
+    }
 }
