@@ -39,6 +39,7 @@
 		BCA911182387EDA200BDBE98 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA911172387EDA200BDBE98 /* Cancellable.swift */; };
 		BCA9111A2387EE5800BDBE98 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA911192387EE5800BDBE98 /* APIRequest.swift */; };
 		BCA9111D2387EF6F00BDBE98 /* URLProtocolMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA9111C2387EF6F00BDBE98 /* URLProtocolMockTests.swift */; };
+		BCD3BEB9242213D900F6E093 /* UIViewController+StarterKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3BEB8242213D900F6E093 /* UIViewController+StarterKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		BCA911172387EDA200BDBE98 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		BCA911192387EE5800BDBE98 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		BCA9111C2387EF6F00BDBE98 /* URLProtocolMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMockTests.swift; sourceTree = "<group>"; };
+		BCD3BEB8242213D900F6E093 /* UIViewController+StarterKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StarterKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +128,9 @@
 				BC95597F238BCA8900687634 /* NSAttributedString+HTML.swift */,
 				BC27168923D6019C00AD200E /* UIFont+StarterKit.swift */,
 				BC60EC8C2396636800736213 /* UIImage+StarterKit.swift */,
-				BCA6B54B238E79A200FE9E67 /* UIView+StarterKit.swift */,
 				BC5D03CF23EC6736007D51CA /* UITableView+StarterKit.swift */,
+				BCA6B54B238E79A200FE9E67 /* UIView+StarterKit.swift */,
+				BCD3BEB8242213D900F6E093 /* UIViewController+StarterKit.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				BCA911182387EDA200BDBE98 /* Cancellable.swift in Sources */,
 				BC988BBD239A6CA6006F0D91 /* JWT.swift in Sources */,
 				BC7D0017238EDA4700A47840 /* KeyboardObserver.swift in Sources */,
+				BCD3BEB9242213D900F6E093 /* UIViewController+StarterKit.swift in Sources */,
 				BCA911152387ED8200BDBE98 /* URLProtocolMock.swift in Sources */,
 				BCA9110A2387E9BC00BDBE98 /* DispatchQueue+StarterKit.swift in Sources */,
 				BCA6B54C238E79A200FE9E67 /* UIView+StarterKit.swift in Sources */,
