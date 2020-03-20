@@ -25,7 +25,7 @@ public enum ResponseError: Error {
 public typealias APIResponse = Result<Data, ResponseError>
 public typealias APIResponseHandler = (APIResponse) -> Void
 
-public protocol APIRequest {
+public protocol APIRequest: CustomDebugStringConvertible {
     var method: HTTPMethod { get }
     var endpoint: String? { get }
     var headers: [String: String]? { get }
