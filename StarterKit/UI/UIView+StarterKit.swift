@@ -64,3 +64,22 @@ public extension UIView {
         set { layer.shadowOffset = newValue }
     }
 }
+
+public extension UIView {
+    @discardableResult
+    func pinToSuperview() -> (top: NSLayoutConstraint, leading: NSLayoutConstraint, bottom: NSLayoutConstraint, trailing: NSLayoutConstraint)? {
+        guard let superview = superview else { return nil }
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        let constraints = (
+            top: topAnchor.constraint(equalTo: superview.topAnchor),
+            leading: leadingAnchor.constraint(equalTo: superview.leadingAnchor),
+            bottom: bottomAnchor.constraint(equalTo: superview.bottomAnchor),
+            trailing: trailingAnchor.constraint(equalTo: superview.trailingAnchor)
+        )
+        
+        NSLayoutConstraint.activate([constraints].flatMap({ [$0, $1, $2, $3] }))
+        
+        return constraints
+    }
+}
