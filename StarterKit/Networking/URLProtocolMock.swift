@@ -92,7 +92,7 @@ open class URLProtocolMock: URLProtocol {
 
 private extension InputStream {
     var data: Data? {
-        var data = NSMutableData()
+        let data = NSMutableData()
         
         let capacity = 4096
         let pointer = UnsafeMutablePointer<UInt8>.allocate(capacity: capacity)
