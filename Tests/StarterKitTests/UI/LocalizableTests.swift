@@ -123,6 +123,6 @@ class LocalizableTests: XCTestCase {
 
 extension String {
     func localized() -> String {
-        return localized(in: Bundle(for: LocalizableTests.self))
+        return localized(in: Bundle.module)
     }
 }

@@ -16,7 +16,7 @@ class UIViewTests: XCTestCase {
         let view: TestView
             
         // when
-        view = TestView.fromNib(in: Bundle(for: TestView.self))
+        view = TestView.fromNib(in: Bundle.module)
         
         // then
         XCTAssertNotNil(view.label)

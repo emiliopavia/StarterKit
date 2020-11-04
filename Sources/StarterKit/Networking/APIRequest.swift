@@ -17,7 +17,7 @@ public enum ResponseError: Error {
     case badRequest(Data?)
     case unauthorized
     case serverError
-    case httpError(Int)
+    case httpError(Int, Data?)
     
     case badResponse
 }
