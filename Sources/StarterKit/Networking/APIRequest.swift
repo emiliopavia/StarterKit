@@ -31,5 +31,6 @@ public protocol APIRequest: CustomDebugStringConvertible {
     var headers: [String: String]? { get }
     var parameters: [String: String?]? { get }
     var contentType: String? { get }
+    var body: Data? { get }
     var responseHandler: APIResponseHandler { get }
 }
