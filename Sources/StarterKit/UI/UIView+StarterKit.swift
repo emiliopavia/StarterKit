@@ -82,4 +82,16 @@ public extension UIView {
         
         return constraints
     }
+
+    func pinToCenter() {
+        guard let superview = superview else { return }
+        translatesAutoresizingMaskIntoConstraints = false
+
+        let constraints = [
+            centerXAnchor.constraint(equalTo: superview.centerXAnchor),
+            centerYAnchor.constraint(equalTo: superview.centerYAnchor)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
+    }
 }
