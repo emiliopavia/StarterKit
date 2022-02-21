@@ -15,7 +15,7 @@ public enum HTTPMethod: String {
 public enum ResponseError: Error {
     case networkError(NSError?)
     case badRequest(Data?)
-    case unauthorized
+    case unauthorized(Data?)
     case serverError
     case httpError(Int, Data?)
     
